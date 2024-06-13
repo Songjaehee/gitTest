@@ -7,3 +7,6 @@ add
 add
 
 practice
+
+practice2
+practice3
