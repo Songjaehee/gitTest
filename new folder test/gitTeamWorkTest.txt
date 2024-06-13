@@ -1,7 +1,7 @@
-dkljajdfkjalkfj
-aadd
---------
-add
-add
+git 설치한다.
 
-add
+git login 방법
+git config --global user.name "Songjaehee"
+git config --global user.email " "
+
+로그인 후
