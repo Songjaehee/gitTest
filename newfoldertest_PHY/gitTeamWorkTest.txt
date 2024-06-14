@@ -1,0 +1,16 @@
+git 설치한다.
+
+<<<<<<< HEAD:new folder test/gitTeamWorkTest.txt
+git login 방법
+git config --global user.name "Songjaehee"
+git config --global user.email " "
+
+로그인 후
+=======
+add
+
+practice
+
+practice2
+practice3
+>>>>>>> 1161335fed7996588e6cf94e8e2aaccaf8600963:newfoldertest_PHY/gitTeamWorkTest.txt

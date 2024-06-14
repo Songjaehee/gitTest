@@ -1,0 +1,76 @@
+name chap01-request-mapping
+location 파일 선택
+
+group : com.ohgiraffers
+jdk 17
+gradle groovy
+dependencies : web-spring web 
+create~
+
+start.spring.io
+하단 generate 클릭
+ add defendence - web 확인 !
+package 루트확인
+
+properties - server 
+1.214.19.22:8002 url 입력
+chap01-request mapping 밑에 ClassMappingTestController
+
+@Controller // 사용자의 요청 처리 bin(?) 이 자동생성 ?
+//실행의 주최 라이브러리/ @만 입력해도 되는 것 프레임워크
+bin 찾아보기 ! 
+@RequestMapping("/orders")//사용자가 요청시에 어떤 요청과 
+연결 시킬 지 정하는거 원래는 (name ="/orders") 해야함
+controller - 하나의 bin 이름 지칭 일반적으로 생략 가능 일반적으로 클래스명
+소문자로 바꿔서 따라감 classMappingTestController
+ RequestMapping 차이 
+
+http method : post get(가져오다) 두가지만 이용
+
+@GetMapping("/")
+public String registOrder(){
+	return "hellow";
+	//서버 바꾸면 항상 재실행
+
+	}
+}
+
+url : localhost8000/orders/
+@Controller ->@RestController 로 바꾼 뒤 재실행
+
+url : localhost8000/orders/
+
+흰화면에 hellow 표시
+browser -> server
+server ->browser
+rest API 규칙 따라서 json 형식 데이터만 반환 (뷰 노노)
+
+@GetMapping("/") 여기에 ("/")지우기
+
+위에 주석달기 ~
+클래스 레벨에  @RequestMapping 어노테이션 사용이 가능하다.
+클래스 레벨에 url을 공통 부분을 이용해서 설정하고 나면 매번 핸들러 메소드에
+url이 중복되는 내용은 작성하지 않아도 된다.
+이때 와일드 카드르 이용해서 조금 더 포괄적인 url 패턴을 설정할 수 있다
+
+@GetMappiing("/orders/test")
+public String regisTest(){
+	return " test";
+}
+}
+url : localhost8000/orders/test
+입력하면 흰화면에 test로 바뀜
+
+
+@Controller
+@RequestMapping("/orders/*") //와일드카드 orders 하위에 모든 요청 처리하겠다
+
+new HTML file 
+
+@GetMappiing("/orders/test")
+public String regisTest(Model model){       //modelandview 와 model의 차이
+	model.addAttrivute("message","get 방식의 주문등록용 핸들러 메소드호출");			
+	return "mappingResult";
+}
+}
+
