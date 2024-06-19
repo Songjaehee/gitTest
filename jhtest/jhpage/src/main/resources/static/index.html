@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jaehee page</title>
+    <style>
+        /* 기본 상태에서 밑줄 제거 */
+        a.hover{
+            align : right;
+            text-decoration: none;
+            color: black; /* 원하는 텍스트 색상으로 변경 */
+        }
+
+        /* 마우스를 가져다 댔을 때 밑줄 추가 */
+        a.hover:hover {
+            text-decoration: underline;
+        }
+        hr.thick-line {
+            border: 0; /* 기본 선 제거 */
+            height: 3px; /* 선의 두께 */
+            background-color: black; /* 선의 색상 */
+        }
+    </style>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<!--    <button onclick="location.href='/jhee/myblog'">내 블로그</button>-->
+<!--    <button onclick="location.href='/jhee/neighborblog'">이웃블로그</button>-->
+<!--    <button onclick="location.href='/jhee/myinfo'">내 정보</button>-->
+    <div align="right">
+        <a href="/jhee/myblog" class="hover"> 내 블로그 </a>
+        <a>|</a>
+        <a href="/jhee/neighborblog"class="hover"> 이웃블로그 </a>
+        <a>|</a>
+        <a href="/jhee/myinfo"class="hover"> 내 정보 </a>
+    </div>
+
+        <h3>&nbsp;&nbsp;blog</h3>
+        <hr class="thick-line">
+
+    <div>
+        <a href="http://localhost:8080/">
+            <img class ="profile" src="/static/css/profile.png" alt="Profile Image">
+        </a>
+    </div>
+
+
+
+
+
+</body>
+</html>
